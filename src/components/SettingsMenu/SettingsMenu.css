@@ -1,0 +1,120 @@
+/* Overlay – blurs everything behind */
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Modal card */
+.settings-menu {
+  width: 520px;
+  max-width: 92vw;
+  background: #1c1c1e;
+  border-radius: 20px;
+  padding: 28px 32px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  font-family: inherit;
+}
+
+/* Header */
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.settings-close {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.settings-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Thin separator under title */
+.settings-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 28px;
+}
+
+/* Body rows */
+.settings-body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.settings-label {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Value pills / inputs */
+.settings-input {
+  min-width: 160px;
+  max-width: 220px;
+  padding: 10px 22px;
+  background: #2c2c2e;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.98rem;
+  text-align: center;
+  outline: none;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.settings-input:focus {
+  background: #3a3a3c;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+}
+
+/* Edit button (Clothes' styles) */
+.settings-edit-btn {
+  min-width: 90px;
+  padding: 10px 26px;
+  background: #2c2c2e;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.settings-edit-btn:hover {
+  background: #3a3a3c;
+}

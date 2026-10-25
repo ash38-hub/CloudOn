@@ -1,0 +1,80 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #424346;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #e3e3e3;
+}
+
+/* Logo */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px 16px;
+}
+
+.logo-icon {
+  margin-left: 15px;
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* forces pure white */
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Thin divider under the logo */
+.sidebar-divider {
+  height: 1px;
+  background-color: #3a3a3a;
+  margin: 0 16px 24px;
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #e3e3e3;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.nav-item:hover {
+  background-color: #2a2a2a;
+}
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1); /* pure white icons */
+}
+
+/* Footer (Account) */
+.sidebar-footer {
+  padding: 0 12px 12px;
+  margin-top: auto;
+}

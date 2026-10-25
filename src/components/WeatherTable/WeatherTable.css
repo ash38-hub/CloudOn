@@ -1,0 +1,63 @@
+.weather-table {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 1100px;
+  padding: 16px 20px;
+  background: #1c1c1e;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.weather-table__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+  min-width: 48px;
+  gap: 8px;
+}
+
+.weather-table__time {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 5px;
+  color: #e5e5e5;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.weather-table__temp {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* Icon base size */
+.weather-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Color the SVGs to match the screenshot */
+.weather-icon--partly {
+  /* cloud stays light, sun becomes yellow */
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+
+.weather-icon--sunny {
+  /* pure yellow sun */
+  filter: brightness(0) saturate(100%) invert(78%) sepia(61%) saturate(548%) hue-rotate(359deg) brightness(103%) contrast(101%);
+}
+
+.weather-icon--moon {
+  /* soft blue crescent */
+  filter: brightness(0) saturate(100%) invert(70%) sepia(40%) saturate(600%) hue-rotate(175deg) brightness(95%) contrast(90%);
+}

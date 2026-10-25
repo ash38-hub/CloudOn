@@ -1,0 +1,183 @@
+/* Overlay with blur */
+.wardrobe-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal */
+.wardrobe-modal {
+  width: 720px;
+  max-width: 92vw;
+  height: 480px;
+  background: #1e1f22;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: scaleIn 0.22s ease;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Header */
+.wardrobe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.wardrobe-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.wardrobe-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Buttons */
+.wardrobe-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2b2e;
+  color: #e8e8e8;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.wardrobe-btn:hover {
+  background: #323336;
+}
+
+.wardrobe-btn.add-active {
+  background: #3794FF;
+  color: #ffffff;
+}
+
+.wardrobe-btn.add-active:hover {
+  background: #2b7fe0;
+}
+
+.wardrobe-btn.delete-active {
+  background: #943535;
+  color: #ffffff;
+}
+
+.wardrobe-btn.delete-active:hover {
+  background: #7a2c2c;
+}
+
+/* Close button */
+.wardrobe-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #a0a0a0;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.wardrobe-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Grid */
+.wardrobe-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  padding: 20px 22px 24px;
+  overflow-y: auto;
+  align-content: start;
+}
+
+/* Individual item */
+.wardrobe-item {
+  position: relative;
+  aspect-ratio: 1;
+  background: #2a2b2e;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c8c8c8;
+  cursor: default;
+  transition: background 0.15s ease, transform 0.1s ease;
+  overflow: hidden;
+}
+
+.wardrobe-item.deletable {
+  cursor: pointer;
+}
+
+.wardrobe-item.deletable:hover {
+  background: #333438;
+}
+
+.wardrobe-item.selected {
+  background: #943535 !important;
+  color: #ffffff;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Trash badge */
+.trash-badge {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.trash-badge.selected-trash {
+  background: rgba(255, 255, 255, 0.25);
+}
